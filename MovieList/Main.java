@@ -20,16 +20,16 @@ public class Main {
     private static void initList(){
         movies.add(new Movie("Forrest Gump", 1994, "Robert Zemeckis", false, 0.0));
         movies.add(new Movie("The Godfather", 1972, "Francis Ford Coppola",false, 0.0));
-//        movies.add(new Movie("The Shawshank Redemption", 1994, "Frank Darabont",false, 0.0));
-//        movies.add(new Movie("Jaws", 1975, "Steven Spielberg",false, 0.0));
-//        movies.add(new Movie("E.T.", 1982, "Steven Spielberg",false, 0.0));
-//        movies.add(new Movie("Jurassic Park", 1993, "Steven Spielberg",false, 0.0));
-//        movies.add(new Movie("Pulp Fiction", 1994, "Quentin Tarantino",false, 0.0));
-//        movies.add(new Movie("Kill Bill: Vol. 1", 2003, "Quentin Tarantino",false, 0.0));
-//        movies.add(new Movie("Inglourious Basterds", 2009, "Quentin Tarantino",false, 0.0));
-//        movies.add(new Movie("Memento", 2000, "Christopher Nolan",false, 0.0));
-//        movies.add(new Movie("Inception", 2010, "Christopher Nolan",false, 0.0));
-//        movies.add(new Movie("Oppenheimer", 2023, "Christopher Nolan",false, 0.0));
+        movies.add(new Movie("The Shawshank Redemption", 1994, "Frank Darabont",false, 0.0));
+     //   movies.add(new Movie("Jaws", 1975, "Steven Spielberg",false, 0.0));
+    //   movies.add(new Movie("E.T.", 1982, "Steven Spielberg",false, 0.0));
+        movies.add(new Movie("Jurassic Park", 1993, "Steven Spielberg",false, 0.0));
+     //   movies.add(new Movie("Pulp Fiction", 1994, "Quentin Tarantino",false, 0.0));
+     //   movies.add(new Movie("Kill Bill: Vol. 1", 2003, "Quentin Tarantino",false, 0.0));
+        movies.add(new Movie("Inglourious Basterds", 2009, "Quentin Tarantino",false, 0.0));
+      //  movies.add(new Movie("Memento", 2000, "Christopher Nolan",false, 0.0));
+      //  movies.add(new Movie("Inception", 2010, "Christopher Nolan",false, 0.0));
+        movies.add(new Movie("Oppenheimer", 2023, "Christopher Nolan",false, 0.0));
     }
 
     private static void menu() {
@@ -161,6 +161,7 @@ public class Main {
             System.out.println(movie2.getTitle() + ", " + movie2.getYear() + ", is older than "
                     + movie1.getTitle() + ", " + movie1.getYear());
         }
+        System.out.println("--------------------------------");
     }
 
     private static void printMovies(Movie movie1, Movie movie2) {
