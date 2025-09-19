@@ -19,7 +19,7 @@ public class Main {
 
     private static void initList(){
         movies.add(new Movie("Forrest Gump", 1994, "Robert Zemeckis", false, 0.0));
-//        movies.add(new Movie("The Godfather", 1972, "Francis Ford Coppola",false, 0.0));
+        movies.add(new Movie("The Godfather", 1972, "Francis Ford Coppola",false, 0.0));
 //        movies.add(new Movie("The Shawshank Redemption", 1994, "Frank Darabont",false, 0.0));
 //        movies.add(new Movie("Jaws", 1975, "Steven Spielberg",false, 0.0));
 //        movies.add(new Movie("E.T.", 1982, "Steven Spielberg",false, 0.0));
@@ -54,7 +54,7 @@ public class Main {
 
             // Valen för användaren
             switch (choice) {
-                case 1 -> printMovieList();// visar lista
+                case 1 -> printMovieList();     // visar lista
                 case 2 -> addMovieToList();
                 case 3 -> rateMovie();          // betygsätt film
                 case 4 -> compareYearOfMovies();// jämför ålder på två filmer
@@ -85,7 +85,7 @@ public class Main {
     private static void addMovieToList(){
         System.out.println();
         System.out.println("Add a movie to your list");
-        
+
         System.out.println("Start with the title:");
         String title = InputHandler.getString();
 
@@ -153,37 +153,30 @@ public class Main {
         if (movie1 == movie2) {
             compareYearOfMovies();
         } else if (movie1.getYear() < movie2.getYear()) {
-            System.out.println();
-            System.out.println("Appointing the oldest one between two random selected movies");
-            System.out.println();
-
-            System.out.println("Comparing:");
-            System.out.println(movie1.getTitle());
-            System.out.println();
-
-            System.out.println("With:");
-            System.out.println(movie2.getTitle());
-            System.out.println();
-
+            printMovies(movie1, movie2);
             System.out.println(movie1.getTitle() + ", " + movie1.getYear() + ", is older than "
                     + movie2.getTitle() + ", " + movie2.getYear());
-            System.out.println("--------------------------------");
         } else {
-            System.out.println();
-            System.out.println("Appointing the oldest one between two random selected movies");
-            System.out.println();
-
-            System.out.println("Comparing:");
-            System.out.println(movie1.getTitle());
-            System.out.println();
-
-            System.out.println("With:");
-            System.out.println(movie2.getTitle());
-            System.out.println();
-
+            printMovies(movie1, movie2);
             System.out.println(movie2.getTitle() + ", " + movie2.getYear() + ", is older than "
                     + movie1.getTitle() + ", " + movie1.getYear());
-            System.out.println("--------------------------------");
         }
+        System.out.println("--------------------------------");
+    }
+
+    private static void printMovies(Movie movie1, Movie movie2) {
+        System.out.println();
+        System.out.println("Appointing the oldest one between two random selected movies");
+        System.out.println();
+
+        System.out.println("Comparing:");
+        System.out.println(movie1.getTitle());
+        System.out.println();
+
+        System.out.println("With:");
+        System.out.println(movie2.getTitle());
+        System.out.println();
+
+
     }
 }
