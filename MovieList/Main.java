@@ -161,7 +161,6 @@ public class Main {
             System.out.println(movie2.getTitle() + ", " + movie2.getYear() + ", is older than "
                     + movie1.getTitle() + ", " + movie1.getYear());
         }
-        System.out.println("--------------------------------");
     }
 
     private static void printMovies(Movie movie1, Movie movie2) {
